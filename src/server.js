@@ -3,6 +3,7 @@ import multer from "multer";
 import processMeeting from "./meeting.service.js";
 import { unlink } from "node:fs/promises";
 import cors from "cors";
+import "dotenv/config";
 import {
   uploadAudio,
   generateSignedUrl,
