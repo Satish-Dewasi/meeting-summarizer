@@ -8,7 +8,7 @@ function UploadSection({
   return (
     <>
       <section className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-[#0f3a3a] bg-[#0e0e16] px-6 py-3 font-medium text-[#4DE8DC] transition hover:border-[#22D3C8] hover:bg-[#14141f]">
+        <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-[#1e3a5f] bg-[#0e0e16] px-6 py-3 font-medium text-[#3B82F6] transition hover:border-[#3B82F6] hover:bg-[#14141f]">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -33,7 +33,7 @@ function UploadSection({
           type="button"
           onClick={onUpload}
           disabled={loading}
-          className="flex cursor-pointer items-center gap-2 rounded-lg bg-gradient-to-b from-[#3EEFE0] via-[#1FD8CC] to-[#0E9E97] px-7 py-3 font-semibold text-white shadow-[0_2px_8px_rgba(34,211,200,0.15)] transition hover:brightness-110 disabled:opacity-50"
+          className="flex cursor-pointer items-center gap-2 rounded-lg bg-gradient-to-b from-[#60A5FA] via-[#3B82F6] to-[#1D4ED8] px-7 py-3 font-semibold text-white shadow-[0_2px_8px_rgba(59,130,246,0.15)] transition hover:brightness-110 disabled:opacity-50"
         >
           {loading ? (
             <span className="flex items-center gap-2">
@@ -65,7 +65,7 @@ function UploadSection({
       </section>
 
       {selectedFile && (
-        <p className="mt-4 text-center text-sm text-[#4DE8DC]">
+        <p className="mt-4 text-center text-sm text-[#3B82F6]">
           Selected: {selectedFile.name}
         </p>
       )}

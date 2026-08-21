@@ -50,7 +50,7 @@ function Tabs({ activeTab, setActiveTab, loading }) {
   const tabs = ["transcript", "summary", "actions"];
 
   return (
-    <div className="flex border-b border-[#0f2e2e]">
+    <div className="flex border-b border-[#16233a]">
       {tabs.map((tab) => {
         const disabled = loading && tab !== "transcript";
         const isActive = activeTab === tab;
@@ -63,10 +63,10 @@ function Tabs({ activeTab, setActiveTab, loading }) {
             onClick={() => setActiveTab(tab)}
             className={`flex flex-1 cursor-pointer items-center justify-center gap-2 px-4 py-4 text-sm font-semibold capitalize transition md:text-base ${
               isActive
-                ? "border-b-2 border-[#1FD8CC] text-[#4DE8DC] shadow-[inset_0_-6px_10px_-8px_rgba(229,172,66,0.8)]"
+                ? "border-b-2 border-[#3B82F6] text-[#3B82F6] shadow-[inset_0_-6px_10px_-8px_rgba(59,130,246,0.8)]"
                 : disabled
                   ? "cursor-not-allowed text-[#3a3a44]"
-                  : "text-[#6b6b78] hover:text-[#4DE8DC]"
+                  : "text-[#6b6b78] hover:text-[#3B82F6]"
             }`}
           >
             {TAB_ICONS[tab]}

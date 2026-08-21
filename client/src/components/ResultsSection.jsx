@@ -11,7 +11,7 @@ function ResultsSection({
   result,
 }) {
   return (
-    <section className="mt-10 flex-1 overflow-hidden rounded-xl border border-[#0f2e2e] bg-[#0b0b12]">
+    <section className="mt-10 flex-1 overflow-hidden rounded-xl border border-[#16233a] bg-[#0b0b12]">
       <Tabs
         activeTab={activeTab}
         setActiveTab={setActiveTab}
