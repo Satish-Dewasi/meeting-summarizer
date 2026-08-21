@@ -1,6 +1,5 @@
 import dotenv from "dotenv";
 import { AssemblyAI } from "assemblyai";
-import { access } from "node:fs/promises";
 
 dotenv.config();
 
@@ -12,16 +11,15 @@ const client = new AssemblyAI({
   apiKey: process.env.ASSEMBLYAI_API_KEY,
 });
 
-const transcribeAudio = async (audioPath) => {
+const transcribeAudio = async (audioUrl) => {
   try {
-    await access(audioPath);
     const transcript = await client.transcripts.transcribe({
-      audio: audioPath,
+      audio: audioUrl,
       speaker_labels: true,
     });
 
     if (transcript.status !== "completed") {
-      throw new Error(`Transcription failed with status:${transcript.status}`);
+      throw new Error(`Transcription failed with status: ${transcript.status}`);
     }
 
     return {

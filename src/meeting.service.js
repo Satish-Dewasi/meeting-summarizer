@@ -5,9 +5,9 @@ import {
 } from "./services/transcript.service.js";
 import generateMeetingSummary from "./services/gemini.service.js";
 
-const processMeeting = async (audioPath) => {
+const processMeeting = async (audioUrl) => {
   try {
-    const transcriptData = await transcribeAudio(audioPath);
+    const transcriptData = await transcribeAudio(audioUrl);
 
     const transcript = formatSpeakerTranscript(transcriptData.utterances);
 
