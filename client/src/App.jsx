@@ -36,7 +36,6 @@ function App() {
       formData.append("audio", selectedFile);
 
       const API_URL = import.meta.env.VITE_API_URL;
-      console.log(API_URL);
 
       const response = await fetch(`${API_URL}/api/meetings`, {
         method: "POST",
